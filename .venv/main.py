@@ -6,7 +6,7 @@ import sett
 import streamlit as st
 
 # configure API Key
-client = OpenAI(api_key=sett.api_key)
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Funcion para crear el Itinerario del lugar a visitar
 def generar_itinerario_viaje(lugar):
